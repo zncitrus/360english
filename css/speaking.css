@@ -1,11 +1,15 @@
 #main,.zn,.zn1,.zn2{width: 100%;}
 
 #main{height: 7484px;}
-.zn1{height: 625px;background: red;}
+.zn{height: 650px;text-align: left; position: relative;zoom: 1; background: url(../image/speaking/zn-b1.jpg);background-position: 50% 0;background-size: cover;background-repeat: no-repeat;}
+.zn1{height: 625px;background:url(../image/speaking/zn-s2.jpg) no-repeat;}
+
+
+
 .zn2{height:1060px;background: red;}
 .wjh{height:1030px;background: #000;}
 .llh{height:955px;padding: 10px 0px; background: #0084CE;}
-.xxk1{height:900px; background:#449D44 ;}
+.xxk1{height:900px; background:#449D44;}
 .xxk2{height:760px; background:#449D44 }
 .wll1{height:804px;background: #A6E1EC;}
 .xxk3{height:700px; background:#449D44 }

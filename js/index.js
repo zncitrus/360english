@@ -2,13 +2,20 @@ $(document).ready(function() {
 	
 	//吸顶条
 	window.onscroll=function(){
-        var $tab=$("#zn_nav");
+		var $tab=$("#zn_nav");
         if(scrollside($(".wjh2"))){
             $tab.addClass("nav_scroll");
         }else{
             $tab.removeClass("nav_scroll");
         }
-	}
+    //吸底条
+		var scrool_height=$('body').height()-2*($('footer').height()+$('#zn_nav').height())
+		if($(document).scrollTop()>scrool_height){
+        	$("#zn_footer").removeClass("footer_scroll");
+        }else{
+        	$("#zn_footer").addClass("footer_scroll");
+        }
+        }
 	//banner
   var length, 
    currentIndex = 0, 
@@ -92,3 +99,35 @@ $(document).ready(function() {
   //开始轮播 
   start(); 
  }); 
+// wll
+window.onload=function(){
+		   	var btn=document.querySelectorAll('.span-tab');
+		   	var wll=document.getElementById('wll');
+	   	    var Div=wll.querySelectorAll('.tab');
+		   	for(var i=0; i<btn.length; i++){
+		   		btn[i].index=i;
+		   		btn[i].onmouseover=function(){	   			
+		   			for(var i=0; i<btn.length; i++){
+		   				btn[i].className='';
+		   				Div[i].style.display='none';
+		   			}
+		   			this.className='span-tab tab-active';
+		   			Div[this.index].style.display='block'
+		   		}		   		
+		   	}
+		   }
+//xxk
+
+$(function(){
+	  $('.log').eq(0).hide();
+	  $('.tab').find('a').eq(1).addClass('active');
+	  $('.tab').find('li').click(function(){
+	  	//alert($(this).index())
+	  	var index=$(this).index()
+	  	$(this).children().addClass('active').parent().siblings().children().removeClass('active');
+	  	
+	  	$('.form').find('form').eq(index).show().siblings().hide()
+	  	
+	  })
+
+})
